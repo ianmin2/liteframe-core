@@ -1,6 +1,14 @@
+const { newArray } = require("./frame.js");
 const framify = require("./frame.js");
 
 c_log(`\nOK`.succ);
+
+c_log(`\n${framify.duplicate(`${framify.icons.success}`.succ, 3)}`, `WELCOME TO SMARTCARDS MANAGER`.yell);
+c_log('\n\nINFO!!\n')
+
+console.log( framify.duplicate('hello ', 10) )
+
+
 
 // app.route("/")
 // .all( (req,res) => {
