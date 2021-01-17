@@ -31,7 +31,7 @@ let framify = {
             framify.method_loop(x - 1)(f)
         }
     },
-    duplicate: (itm, times) => ((itm && times) && !isNaN(times)) ? new Array(times).map(a => itm) : itm,
+    duplicate: (itm, times) => ((itm && times) && !isNaN(times)) ? new Array(times).map(a => itm).join('') : itm,
     inject: function(nom, objet) {
         //@ Handle multiple definitions
         if (Array.isArray(nom)) {
