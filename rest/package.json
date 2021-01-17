@@ -1,0 +1,11 @@
+{
+  "name": "framify-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rest.es6",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Innocent <ianmin2@bixbyte.io> (http://bixbyte.io)",
+  "license": "ISC"
+}

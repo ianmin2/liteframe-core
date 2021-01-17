@@ -1,0 +1,13 @@
+{
+    "name": "framify-essentials",
+    "version": "1.0.0",
+    "description": "The essenttial imports loader for bixbyte-frame",
+    "main": "essentials.es6",
+    "scripts": {
+      "test": "echo \n \"@bixbyte-frame essentials loader\" \n"
+    },
+    "dependencies": {
+    },
+    "author": "Ian Innocent <ianmin2@bixbyte.io> (http://bixbyte.io)",
+    "license": "ISC"
+  }

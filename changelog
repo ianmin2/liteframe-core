@@ -1,0 +1,164 @@
+v 0.1.20
+	Added Array.uniq prototype.
+
+v 0.1.21
+	Testing the SMS client registration feature
+
+v 0.2.0
+	Buggy Client based SMS gateway ready for development
+
+v 0.2.1
+	Added the global keyFormat method for simple json parsing after jQuery.ajax() calls
+
+v 0.3.0
+	-> Updated Global Dependencies
+	-> Added support for the mailgun email api
+	-> Defined minimum nodejs version required
+	-> Set preference for global installation
+
+v 0.3.6
+	-> Added support for async fRead and FWrite
+
+v 0.4.0
+	-> Removed unnecessary template styles from the logging engine
+	-> Converted the none prototype essentials into es6 ~ due to the "this" aspect ~
+
+v 0.5.0 
+	-> Added support for base64 encoding and decoding
+	-> Re -enabled the google authentication modules
+	-> Started on harmonization of modules
+
+v.0.5.1
+	-> Added Support for Array.prototype.replace which is a function (  regex, replacement_string )
+	-> Added support for Array value removal ~Array.prototype.remove~ by an array of indices ( [Array of indices to remove] )
+	-> Added support for Array String value capitalization implemented by Array.prototype.capitalize
+
+v.0.5.2
+	-> Added  'day' for  "ddd",  'fullDay' for  "dddd", 'month'  for "mmm" and 'fullMonth'  for "mmmm" as formatType options  in the Date.prototype.format ( formatType ) method
+
+v0.5.3
+	-> Added 'dateTime' for 'ddd HH:MM' as  a formatType option  in the Date.prototype.format ( formatType ) method
+
+v0.5.4
+	-> Packed up the global.crypt encryption object as one rather than as an incrementaly growing object
+	
+v0.6.0
+       	-> Added support for object with the keys [name,user,password,host:[url,port,idle,max_connections]] for the mongodb connection method
+
+v0.7.0 
+		-> Added support for JWT authentication and added the some modules globally accessible as [passport_jwt => passport-jwt ,nJwt => njwt,jwt => jsonwebtoken] 
+v0.8.0
+		-> Added support for mongoose currency  and added the global variable [Currency] refering to [mongoose.Types.Currency];
+		
+v0.8.1	
+	-> Added support for global.isTelephone to check the validity of telephone numbers
+v0.8.2   
+	-> Fixed the improperly fixed mongoose.Promise function
+v0.8.3	
+	-> Added support for Array.prototype.unique and Array.prototype.fast_unique to filter out an array an give a resultant array with only unique values
+V0.9.1 
+		 -> Introduced support for Google Cloud Messaging
+      
+v.0.10.0 
+		-> Re - introduced colors markup in the log file so as to allow for better/guided/color-coded debugging
+
+v.0.11.0
+		=> Re-Introduced the global 'pg' variablle to allow for JWT authentication c/o Postgresql
+		
+v.0.11.1	=> Added the 'url' npm package as a dependency and made it globaly accessible as 'global.url' in the essentials file
+
+v.0.12.1	=> Added the 'get_params' method that takes away the hustle of properly parsing the HTTP parameters.
+
+v.0.12.2	=> Made the require function return the framify global object.
+		    => Fixed the 'get_params' loading error.
+		
+v.0.12.4	=> Allowed the "makeResponse" method to return an undefined message.
+
+v.0.13.0    	=> Added  the "isDefined" global method to ensure that a given key is defined in an object and that it bears a none null value.
+		    => Added  the "isPresent" global method to ensure that a given key is defined in an object
+		
+			usage:  
+				isDefined({one:1,two:2,three:3,four:0},["one","two","three","four"]) 
+				or 
+				isDefined({one:1,two:2,three:3,four:0},"one,two,three,four")
+				
+			Both the above return "false" since the value "four" bears a falsy value.
+			
+				isPresent({one:1,two:2,three:3,four:0},"one,two,three,four")
+				
+			However returns "true" due to the fact that it searches only for the existance of the key
+
+v.0.14.0		=> Added the dependency pg-promise for a postgres database connection
+
+v.0.15.0        => Fixed the "request" module not found error
+
+v.0.15.1		=> FIxed the variables not found error
+
+v.0.16.0 		=> Added support for ssl compliant services via the "ssl_server( ssl_config )" method
+
+v.0.16.1 		=> FIXED the HTTPS "not found error"
+
+v0.17.0         => Added angular-sanitize to the inbuilt dependencies ( required for framify "2.8.0^" )
+
+v0.17.1	        => Allowed body parser to parse JSON requests of up to 50mb
+
+v.0.18.0 		=> Added the "isOnline" and identical "is_online" promise yielding methods
+
+v.0.18.1		=> Updated the "fs.extra" dependency to version ^4.0.1
+				=> Got rid of the redundant npm "path" dependency
+				
+V.0.19.0	
+			=> Added the ".clean" prototype on the Array type such that it accepts a parameteror parameters to remove
+
+v.0.20.0        
+			=> Modified the ".clean" Array prototype to use the inbuilt filter prototype to clear the unwanted values
+			=> Added the ".mean" and ".sum" Array prototypes so as to allow for the easy acquisition of such array contents
+			=> Added the ".getCount" and identical ".get_count" global Array prototype for the essence of getting an  [item,frequency] response array
+
+v.0.20.1	
+			=> Fixed the invalid dependecy error
+
+v.0.20.2    
+			=> Fixed an Array ".mean" calculation error
+
+v.0.21.0 	
+			=> Pushed the uploaded document file size limit up to 500mb from 50mb 
+
+v.1.0.0		
+			=> 	Translated to basic es6 with migration of methods allowing them to be more modular and logically ordered 
+				Ready for framify v3
+
+
+==>  BRANCHED TO LITE 
+
+v.1.0.0 
+
+v.1.0.3
+			=> Added querystring and request as dependencies
+v.1.3.0
+			> prefixed the non-module global variables in preparation for standardization at v2 release
+v.1.5.0     
+			=> Deprecated Buffer issue fixed
+			=> Unknown method `keyFormat` fix
+v.1.6.0
+			=> is_present method fixed to reflect [is either/any present]
+v.1.6.1
+			=> added string and number is_present method 
+
+==> LITEFRAME 
+
+v.0.3.0     => Added untested Object.filter
+
+v.0.9.0 	=> Added untested crypto.key_encrypt(content,abs_path_to_pub_key) and crypto.key_decrypt(content,abs_path_to_priv_key) methods 
+
+v.0.10.0	=> Upgraded sequelize version to 5.3.0 (May Introduce unforseen breaks)
+
+v.0.13.0 	=> request_promise global variable References 'axios' module
+
+v.0.14.0 	=> request-promise module back by popular demand
+
+v.0.15.0 	=> Dependency re-arranging, addition of rsa_encrypt & rsa_decrypt methods and update of hashing methods to use the global _STR over the str (which is easy to overwrite)
+
+==> LITEFRAME -core 
+
+v.3.0.0   	=> Splitting the main and the core framework functionality so as to permit ease of use
