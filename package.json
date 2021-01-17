@@ -1,6 +1,6 @@
 {
     "name": "liteframe-core",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "description": "A flexible lightweight framework with the bare minimums and networking capabilities",
     "main": "frame.js",
     "scripts": {
