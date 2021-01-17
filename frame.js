@@ -32,7 +32,7 @@ let framify = {
             framify.method_loop(x - 1)(f)
         }
     },
-    duplicate: (itm, times) => ((itm && times) && !isNaN(times)) ? framify.newArray(times).fill(undefined).map(a => itm).join('') : itm,
+    duplicate: (itm, times) => ((itm && times) && !isNaN(times)) ? framify.newArray(times).fill(itm).join('') : itm,
     inject: function(nom, objet) {
         //@ Handle multiple definitions
         if (Array.isArray(nom)) {
