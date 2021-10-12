@@ -1,5 +1,5 @@
 let v = JSON.parse(require('fs').readFileSync(`${__dirname}/package.json`)).version;
-console.log(`\n\t\t     @liteframe-core ${v}\n\t\t___________________`);
+console.log(`\n\t\t  @liteframe-core ${v}\n\t\t___________________`);
 
 //@ Load the core framework essentials
 require(require("path").join(__dirname, `essentials/essentials.es6`))
