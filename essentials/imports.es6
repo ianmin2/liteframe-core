@@ -26,6 +26,10 @@ exports.request = require("request");
 exports.qs = require("querystring");
 exports.request_promise = require("request-promise");
 
+const dotenv = require("dotenv");
+exports.dotenv = dotenv;
+exports.winston = require("winston");
+
 //@ Store the path to the user directory
 exports.home =
   process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
@@ -59,6 +63,11 @@ exports.jwt = require("jsonwebtoken");
 const Joi = require("@hapi/joi");
 Joi.objectId = require("joi-objectid")(Joi);
 exports.Joi = Joi;
+
+// @ LOAD THE ENV VARS
+dotenv.config({
+  debug: process.env.DEBUG,
+});
 
 /**
     EO - BASIC IMPORTS
