@@ -1,6 +1,14 @@
 const { createLogger, format, transports } = winston;
-const { combine, timestamp, label, prettyPrint, json, simple, logstash } =
-  format;
+const {
+  combine,
+  timestamp,
+  label,
+  prettyPrint,
+  json,
+  simple,
+  colorize,
+  logstash,
+} = format;
 
 const service = process.env.APP_NAME || "@liteframe-core";
 
@@ -20,7 +28,7 @@ fse.ensureDirSync(logDestination);
 
 const consoleLogger = createLogger({
   defaultMeta: { service, timestamp: Date.now() },
-  format: prettyPrint(),
+  format: combine(prettyPrint(), colorize()),
   level: "silly",
   transports: [new transports.Console()],
 });
@@ -52,13 +60,17 @@ const jlogger = createLogger({
     new transports.File({
       filename: jsonLogpath,
     }),
+    new transports.Console({
+      format: combine(colorize(), simple()),
+      level: "silly",
+    }),
   ],
 });
 
 if (process.env.DEBUG) {
   logger.add(
     new transports.Console({
-      format: simple(),
+      format: combine(colorize(), simple()),
       level: "silly",
     })
   );
