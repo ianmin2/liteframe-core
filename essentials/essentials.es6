@@ -2,6 +2,9 @@
     FUNCTIONAL IMPORTS
 **/
 
+//@ Add the code tracing tools to the stack
+require("./tracing/code-tracing.es6");
+
 //@ Fetch the imported [local & installed] modules
 Object.assign(global, require(require(`path`).join(__dirname, "imports.es6")));
 
